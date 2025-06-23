@@ -5,8 +5,10 @@ from aiogram.types import Message
 from aiogram import F
 import asyncio
 import random
+import os
 
-TOKEN = "ВСТАВЬ_СЮДА_СВОЙ_ТОКЕН"
+TOKEN = os.getenv("TOKEN")
+
 
 bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
 dp = Dispatcher()
